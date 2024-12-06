@@ -1,0 +1,145 @@
+<html>
+
+<head>
+    <title>Manage Your Logs</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/crops.css" />
+</head>
+
+<body>
+    <div class="sidebar">
+        <h1 style="color: #011301;">Green<span>Pulse.</span></h1>
+        <a href="/pages/dashboard.html">
+            <i class="fas fa-home">
+            </i>
+            Home
+        </a>
+        <a href="/pages/field.html">
+            <i class="fas fa-seedling">
+            </i>
+            Field
+        </a>
+        <a href="/pages/crops.html">
+            <i class="fas fa-leaf">
+            </i>
+            Crops
+        </a>
+        <a href="/pages/staff.html">
+            <i class="fas fa-users">
+            </i>
+            Staff
+        </a>
+        <a class="active" href="/pages/logs.html">
+            <i class="fas fa-book">
+            </i>
+            Logs
+        </a>
+        <a href="/pages/vehicle.html">
+            <i class="fas fa-tractor">
+            </i>
+            Vehicle
+        </a>
+        <a href="/pages/equipment.html">
+            <i class="fas fa-tools">
+            </i>
+            Equipment
+        </a>
+        <a href="/index.html" id="log-out">
+            <i class="fas fa-sign-out-alt">
+            </i>
+            Log Out
+        </a>
+    </div>
+    <div class="main-bacground">
+        <div class="main-content">
+            <div class="two-bars">
+                <div class="date">
+                    <div class="input-container-date">
+                        <input type="datetime-local" id="datetime" readonly>
+                    </div>
+                </div>
+                <div class="search-bar">
+                    <div class="input-container">
+                        <i class="fas fa-search"></i>
+                        <input placeholder="Search" type="text" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="id">
+                        Log ID
+                    </label>
+                    <input id="crop-code" placeholder="Enter Log Id" type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="date">
+                        Date
+                    </label>
+                    <input id="log-date" placeholder="Enter the date" type="date" />
+                </div>
+                <div class="form-group">
+                    <label for="select-crop">
+                        Field
+                    </label>
+                    <select  id="log-field">
+                        <option>Select the field</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="select-crop">
+                        Crop
+                    </label>
+                    <select  id="log-crop">
+                        <option>Select the crop</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="select-staff">
+                        Staff
+                    </label>
+                    <select  id="log-staff">
+                        <option>Select the staff</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="observed-image">
+                        Observed Image
+                    </label>
+                    <input id="observed-image" type="file" />
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="save">
+                    Save
+                </button>
+                <button class="update">
+                    Update
+                </button>
+                <button class="delete">
+                    Delete
+                </button>
+            </div>
+            <div class="table-container" >
+                <table id="crop-table">
+                    <thead>
+                        <tr>
+                            <th>Crop ID</th>
+                            <th>Common Name</th>
+                            <th>Scientific Name</th>
+                            <th>Season</th>
+                            <th>Category</th>
+                            <th>Image</th>
+                            <th>Field</th>
+                        </tr>
+                    </thead>
+                    <tbody id="my-table">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="/js/date_time.js"></script>
+</body>
+
+</html>
