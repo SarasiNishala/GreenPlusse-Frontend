@@ -7,88 +7,123 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <h1>GreenPulse.</h1>
-            <ul>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-home"> </i>
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-seedling"> </i>
-                        Field
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-leaf"> </i>
-                        Crops
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-users"> </i>
-                        Staff
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-book"> </i>
-                        Logs
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-tractor"> </i>
-                        Vehicles
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-tools"> </i>
-                        Equipment
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-user-shield"> </i>
-                        AuthPanel
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-sign-out-alt"> </i>
-                        Log Out
-                    </a>
-                </li>
-            </ul>
-        </div>
+    <div class="sidebar">
+        <h1 style="color: #011301;">Green<span>Pulse.</span></h1>
+        <a href="/pages/dashboard.html">
+            <i class="fas fa-home">
+            </i>
+            Home
+        </a>
+        <a class="active" href="/pages/field.html">
+            <i class="fas fa-seedling">
+            </i>
+            Field
+        </a>
+        <a href="/pages/crops.html">
+            <i class="fas fa-leaf">
+            </i>
+            Crops
+        </a>
+        <a href="/pages/staff.html">
+            <i class="fas fa-users">
+            </i>
+            Staff
+        </a>
+        <a href="/pages/logs.html">
+            <i class="fas fa-book">
+            </i>
+            Logs
+        </a>
+        <a href="/pages/vehicle.html">
+            <i class="fas fa-tractor">
+            </i>
+            Vehicle
+        </a>
+        <a href="/pages/equipment.html">
+            <i class="fas fa-tools">
+            </i>
+            Equipment
+        </a>
+        <a href="/pages/authpanel.html">
+            <i class="fas fa-user-shield">
+            </i>
+            Authpanel
+        </a>
+        <a href="/index.html" id="log-out">
+            <i class="fas fa-sign-out-alt">
+            </i>
+            Log Out
+        </a>
+    </div>
+    <div class="main-bacground">
         <div class="main-content">
-            <div class="search-bar">
-                <input placeholder="Search" type="text" />
+            <div class="two-bars">
+                <div class="date">
+                    <div class="input-container-date">
+                        <input type="datetime-local" id="datetime" readonly>
+                    </div>
+                </div>
+                <div class="search-bar">
+                    <div class="input-container">
+                        <i class="fas fa-search"></i>
+                        <input placeholder="Search" type="text" />
+                    </div>
+                </div>
             </div>
-            <h2>Manage Your Fields</h2>
             <div class="form-container">
-                <input placeholder="Enter Field Code" type="text" />
-                <input placeholder="Enter Name" type="text" />
-                <input placeholder="Enter Location" type="text" />
-                <input placeholder="Enter size" type="text" />
-                <select>
-                    <option>Select Crops</option>
-                </select>
-                <select>
-                    <option>Select Staff</option>
-                </select>
-                <input placeholder="Upload Image 1" type="file" />
-                <input placeholder="Upload Image 2" type="file" />
-                <button class="save-btn">Save</button>
-                <button class="update-btn">Update</button>
-                <button class="delete-btn">Delete</button>
-                <button class="clear-btn">Clear</button>
+                <div class="form-group">
+                    <label for="field-code">
+                        Field Code
+                    </label>
+                    <input id="field-code" placeholder="Enter Field Code" type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="field-name">
+                        Field Name
+                    </label>
+                    <input id="field-name" placeholder="Enter Name" type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="field-location">
+                        Field Location
+                    </label>
+                    <input id="field-location" placeholder="Enter Location" type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="field-size">
+                        Size of Field
+                    </label>
+                    <input id="field-size" placeholder="Enter size" type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="field-image1">
+                        Field Image 1
+                    </label>
+                    <input id="field-image1" type="file" />
+                </div>
+                <div class="form-group">
+                    <label for="field-image2">
+                        Field Image 2
+                    </label>
+                    <input id="field-image2" type="file" />
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="save">
+                    Save
+                </button>
+                <button class="update">
+                    Update
+                </button>
+                <button class="delete">
+                    Delete
+                </button>
+                <button class="assign-staff">
+                    Assign Staff
+                </button>
+                <button class="view-staff">
+                    View Staff
+                </button>
             </div>
             <div class="table-container">
                 <table>
@@ -97,109 +132,18 @@
                             <th>Field Code</th>
                             <th>Field name</th>
                             <th>Location</th>
-                            <th>size</th>
-                            <th>Crops</th>
-                            <th>Staff</th>
+                            <th>Size</th>
                             <th>Image 1</th>
                             <th>Image 2</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>F001</td>
-                            <td>Mixed Crops</td>
-                            <td>Location</td>
-                            <td>25 * 25</td>
-                            <td>Chickpea Reddish Cassava</td>
-                            <td>Kamal Tharushi</td>
-                            <td>
-                                <img alt="Field Image 1" height="60"
-                                    src="https://storage.googleapis.com/a1aa/image/XMeDiCBxPczvXK0gnAEeI1z6YI9zeAhAZgOZwsyLT49pWEpnA.jpg"
-                                    width="100" />
-                            </td>
-                            <td>
-                                <img alt="Field Image 2" height="60"
-                                    src="https://storage.googleapis.com/a1aa/image/PK3ymgvqDlYmFlbR0eiHKjKwMYefxk0um3bFy1QNsXNiWEpnA.jpg"
-                                    width="100" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>F001</td>
-                            <td>Mixed Crops</td>
-                            <td>Location</td>
-                            <td>25 * 25</td>
-                            <td>Chickpea Reddish Cassava</td>
-                            <td>Kamal Tharushi</td>
-                            <td>
-                                <img alt="Field Image 1" height="60"
-                                    src="https://storage.googleapis.com/a1aa/image/XMeDiCBxPczvXK0gnAEeI1z6YI9zeAhAZgOZwsyLT49pWEpnA.jpg"
-                                    width="100" />
-                            </td>
-                            <td>
-                                <img alt="Field Image 2" height="60"
-                                    src="https://storage.googleapis.com/a1aa/image/PK3ymgvqDlYmFlbR0eiHKjKwMYefxk0um3bFy1QNsXNiWEpnA.jpg"
-                                    width="100" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>F001</td>
-                            <td>Mixed Crops</td>
-                            <td>Location</td>
-                            <td>25 * 25</td>
-                            <td>Chickpea Reddish Cassava</td>
-                            <td>Kamal Tharushi</td>
-                            <td>
-                                <img alt="Field Image 1" height="60"
-                                    src="https://storage.googleapis.com/a1aa/image/XMeDiCBxPczvXK0gnAEeI1z6YI9zeAhAZgOZwsyLT49pWEpnA.jpg"
-                                    width="100" />
-                            </td>
-                            <td>
-                                <img alt="Field Image 2" height="60"
-                                    src="https://storage.googleapis.com/a1aa/image/PK3ymgvqDlYmFlbR0eiHKjKwMYefxk0um3bFy1QNsXNiWEpnA.jpg"
-                                    width="100" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>F001</td>
-                            <td>Mixed Crops</td>
-                            <td>Location</td>
-                            <td>25 * 25</td>
-                            <td>Chickpea Reddish Cassava</td>
-                            <td>Kamal Tharushi</td>
-                            <td>
-                                <img alt="Field Image 1" height="60"
-                                    src="https://storage.googleapis.com/a1aa/image/XMeDiCBxPczvXK0gnAEeI1z6YI9zeAhAZgOZwsyLT49pWEpnA.jpg"
-                                    width="100" />
-                            </td>
-                            <td>
-                                <img alt="Field Image 2" height="60"
-                                    src="https://storage.googleapis.com/a1aa/image/PK3ymgvqDlYmFlbR0eiHKjKwMYefxk0um3bFy1QNsXNiWEpnA.jpg"
-                                    width="100" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>F001</td>
-                            <td>Mixed Crops</td>
-                            <td>Location</td>
-                            <td>25 * 25</td>
-                            <td>Chickpea Reddish Cassava</td>
-                            <td>Kamal Tharushi</td>
-                            <td>
-                                <img alt="Field Image 1" height="60"
-                                    src="https://storage.googleapis.com/a1aa/image/XMeDiCBxPczvXK0gnAEeI1z6YI9zeAhAZgOZwsyLT49pWEpnA.jpg"
-                                    width="100" />
-                            </td>
-                            <td>
-                                <img alt="Field Image 2" height="60"
-                                    src="https://storage.googleapis.com/a1aa/image/PK3ymgvqDlYmFlbR0eiHKjKwMYefxk0um3bFy1QNsXNiWEpnA.jpg"
-                                    width="100" />
-                            </td>
-                        </tr>
+                    <tbody id="my-table">
+                        
                     </tbody>
                 </table>
             </div>
         </div>
-    </div>
+        <script src="/js/field.js"></script>
 </body>
 
 </html>
