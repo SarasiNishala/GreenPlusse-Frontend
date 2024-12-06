@@ -1,0 +1,185 @@
+<html>
+
+<head>
+    <title>Manage Your Staff</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/staff.css" />
+</head>
+
+<body>
+    <div class="sidebar">
+        <h1 style="color: #011301;">Green<span>Pulse.</span></h1>
+        <a href="/pages/dashboard.html">
+            <i class="fas fa-home">
+            </i>
+            Home
+        </a>
+        <a href="/pages/field.html">
+            <i class="fas fa-seedling">
+            </i>
+            Field
+        </a>
+        <a href="/pages/crops.html">
+            <i class="fas fa-leaf">
+            </i>
+            Crops
+        </a>
+        <a class="active" href="/pages/staff.html">
+            <i class="fas fa-users">
+            </i>
+            Staff
+        </a>
+        <a href="/pages/logs.html">
+            <i class="fas fa-book">
+            </i>
+            Logs
+        </a>
+        <a href="/pages/vehicle.html">
+            <i class="fas fa-tractor">
+            </i>
+            Vehicle
+        </a>
+        <a href="/pages/equipment.html">
+            <i class="fas fa-tools">
+            </i>
+            Equipment
+        </a>
+        <a href="/index.html" id="log-out">
+            <i class="fas fa-sign-out-alt">
+            </i>
+            Log Out
+        </a>
+    </div>
+    <div class="main-bacground">
+        <div class="main-content">
+            <div class="two-bars">
+                <div class="date">
+                    <div class="input-container-date">
+                        <input type="datetime-local" id="datetime" readonly>
+                    </div>
+                </div>
+                <div class="search-bar">
+                    <div class="input-container">
+                        <i class="fas fa-search"></i>
+                        <input placeholder="Search" type="text" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="staff-id">
+                        Id
+                    </label>
+                    <input id="staff-id" placeholder="Enter Staff Id" type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="email">
+                        Email
+                    </label>
+                    <input id="email" placeholder="Enter the email" type="email" />
+                </div>
+                <div class="form-group">
+                    <label for="firstName">
+                        First Name
+                    </label>
+                    <input id="first_name" placeholder="Enter First Name" type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="lastName">
+                        Last Name
+                    </label>
+                    <input id="last_name" placeholder="Enter Last Name" type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="designation">
+                        Designation
+                    </label>
+                    <select  id="designation">
+                        <option>Select Designation</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="contact">
+                        Contact Number
+                    </label>
+                    <input id="contact" placeholder="Enter Contact Number" type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="crop-image">Address</label>
+                    <div class="address-input">
+                        <input id="line_1" placeholder="House No" type="text" />
+                        <input id="line_2" placeholder="Street" type="text" />
+                        <input id="line_3" placeholder="Area" type="text" />
+                        <input id="line_4" placeholder="City" type="text" />
+                        <input id="line_5" placeholder="Country" type="text" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="joinedDate">Joined Date</label>
+                    <input id="joined_date" placeholder="Select joined date" type="date">
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date Of Birth</label>
+                    <input id="dob" placeholder="dd/mm/yyyy" type="date">
+                </div>
+                <div class="form-group">
+                    <label for="role">
+                        Role
+                    </label>
+                    <select  id="designation">
+                        <option>Select your role</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <div class="radio-btn">
+                        <label class="radio-container">
+                            Male
+                            <input type="radio" name="options" value="male">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="radio-container">
+                            Female 
+                            <input type="radio" name="options" value="female">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="save">
+                    Save
+                </button>
+                <button class="update">
+                    Update
+                </button>
+                <button class="delete">
+                    Delete
+                </button>
+            </div>
+            <div class="table-container" >
+                <table id="staff-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>First Name</th>
+                            <th>Email</th>
+                            <th>Contact No</th>
+                            <th>Designation</th>
+                            <th>Role</th>
+                            <th>Address</th>
+                            <th>Gender</th>
+                            <th>Joined Date</th>
+                            <th>Date Of Birth</th>
+                        </tr>
+                    </thead>
+                    <tbody id="my-table">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="/js/date_time.js"></script>
+</body>
+
+</html>

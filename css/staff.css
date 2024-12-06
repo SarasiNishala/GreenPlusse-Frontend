@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Mulish;
+  display: flex;
+  height: 100vh;
+  width: 100vw; /* Ensure full width */
+  overflow: hidden; /* Prevent scrolling due to extra spaces */
+  background-color: #d2dfc5;
+}
+
+.sidebar h1 span{
+    color: #214D1D;
+}
+.sidebar h1 { 
+    font-family: Kanit;
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+.sidebar {
+  width: 155px;
+  background-color: #d2dfc5;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.sidebar img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+.sidebar a {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none;
+  color: #2d6a4f;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-radius: 10px 0px 0px 10px;
+  font-weight: 700;
+}
+.sidebar a:hover {
+  background-color: #8ab069;
+  width: 115px;
+}
+.sidebar a.active {
+  background-color: #8ab069;
+  width: 115px;
+}
+.sidebar a i {
+  margin-right: 10px;
+}
+#log-out{
+  margin-top: 50px;
+}
+.main-bacground{
+    background-color: #D4E2C8;
+    padding-top: 15px;
+}
+.main-content {
+  flex: 1; /* Fill remaining space */
+  width: 1070px; /* Account for sidebar and margins */
+  background-color: #8ab069;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: calc(100vh - 28px); /* Account for margin-bottom and padding */
+  margin: 0 8px 8px 0; /* Add margin-right and bottom margin */
+}
+.two-bars {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Distribute space evenly between children */
+  align-items: center; /* Align elements vertically to the center */
+  margin-bottom: 20px; /* Adjust spacing below the bar */
+  gap: 570px; /* Add space between items if needed */
+}
+
+.search-bar,
+.date {
+  flex: 1; /* Allow both to take equal space if necessary */
+  display: flex; /* Flex container */
+  justify-content: center; /* Center-align the inner elements */
+}
+
+.input-container,
+.input-container-date {
+  position: relative;
+  width: 210px; /* Maintain consistent width */
+}
+
+.input-container i,
+.input-container-date i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #1a5319;
+  pointer-events: none;
+}
+
+.input-container input,
+.input-container-date input {
+  padding: 10px 10px 10px 35px; /* Adjust padding for icon */
+  border: none;
+  border-radius: 20px;
+  width: 200px; /* Consistent width */
+  height: 35px;
+  background-color: #d2dfc5;
+  font-family: Mulish;
+  font-weight: 600;
+  color: #214D1D;
+}
+
+.input-container input::placeholder {
+  color: #1a5319;
+  opacity: 1;
+}
+
+.input-container-date input {
+  padding: 10px 10px 10px 25px;
+}
+/* form containor */
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.form-group {
+  flex: 1;
+  min-width: 200px;
+}
+.form-group label{
+  font-family: Mulish;
+  font-weight: 700;
+  color: #1a5319;
+}
+.form-group input,
+.form-group select {
+  width: 100%;
+  height: 36px;
+  padding: 10px;
+  font-family: Mulish;
+  border: 1px solid #C1D5A4;
+  border-radius: 5px;
+  margin-top: 5px;
+  background-color: transparent;
+  color: white;
+}
+.form-group input::placeholder {
+  color: white; /* Set the placeholder text color to white */
+  opacity: 1; /* Ensure full visibility */
+}
+.form-group select {
+    appearance: none; /* Remove default dropdown arrow */
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none; /* For Firefox */
+}
+.address-input{
+    display: flex;
+}
+.radio-btn {
+    margin-top: 5px;
+}
+
+.radio-container {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 24px;
+    margin-right: 60px;
+    border: 2px solid transparent; /* Default border is transparent */
+    border-radius: 4px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+/* Hide default radio button */
+.radio-container input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Style for the custom checkmark */
+.radio-container .checkmark {
+    position: absolute;
+    left: 60px;
+    top: 8px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+/* When radio is selected */
+.radio-container input[type="radio"]:checked ~ .checkmark {
+    background-color: transparent; /* Transparent background */
+    border-color: #1a5319; /* Green border when selected */
+}
+
+/* When the radio button is hovered or selected */
+.radio-container input[type="radio"]:checked ~ .checkmark {
+    border-color: #1a5319; /* Green border */
+}
+
+.radio-container input[type="radio"]:checked ~ .checkmark::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 10px;
+    height: 10px;
+    background-color: #1a5319; /* Green dot for selected option */
+    border-radius: 50%;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center; /* Center aligns the buttons horizontally */
+}
+.buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  height: 32px;
+}
+.buttons .save {
+  background-color: #4A90E2;
+}
+.buttons .update {
+  background-color: #4CAF50;
+}
+.buttons .delete {
+  background-color: #E74C3C;
+}
+.buttons .assign-staff {
+  background-color: #F1C40F;
+}
+.buttons .view-staff {
+  background-color: #7F8C8D;
+}
+.table-container {
+  background-color: #e8f5e9;
+  padding: 20px;
+  border-radius: 10px;
+  overflow-x: auto;
+  height: 400px;
+  position: relative;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table th,
+table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #a5d6a7;
+}
+table th {
+  background-color: #8ab069;
+  color:#1a5319;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+table td img {
+  width: 100px;
+  height: 60px;
+  border-radius: 5px;
+}
