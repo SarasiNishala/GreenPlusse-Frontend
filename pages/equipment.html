@@ -1,0 +1,122 @@
+<html>
+
+<head>
+    <title>Manage Your Equipment</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/equipment.css" />
+</head>
+
+<body>
+    <div class="sidebar">
+        <h1 style="color: #011301;">Green<span>Pulse.</span></h1>
+        <a href="/pages/dashboard.html">
+            <i class="fas fa-home">
+            </i>
+            Home
+        </a>
+        <a href="/pages/field.html">
+            <i class="fas fa-seedling">
+            </i>
+            Field
+        </a>
+        <a href="/pages/crops.html">
+            <i class="fas fa-leaf">
+            </i>
+            Crops
+        </a>
+        <a href="/pages/staff.html">
+            <i class="fas fa-users">
+            </i>
+            Staff
+        </a>
+        <a href="/pages/logs.html">
+            <i class="fas fa-book">
+            </i>
+            Logs
+        </a>
+        <a href="/pages/vehicle.html">
+            <i class="fas fa-tractor">
+            </i>
+            Vehicle
+        </a>
+        <a class="active" href="/pages/equipment.html">
+            <i class="fas fa-tools">
+            </i>
+            Equipment
+        </a>
+        <a href="/index.html" id="log-out">
+            <i class="fas fa-sign-out-alt">
+            </i>
+            Log Out
+        </a>
+    </div>
+    <div class="main-bacground">
+        <div class="main-content">
+            <div class="two-bars">
+                <div class="date">
+                    <div class="input-container-date">
+                        <input type="datetime-local" id="datetime" readonly>
+                    </div>
+                </div>
+                <div class="search-bar">
+                    <div class="input-container">
+                        <i class="fas fa-search"></i>
+                        <input placeholder="Search" type="text" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="id">
+                        Equipment ID
+                    </label>
+                    <input id="equipment-id" placeholder="Enter equipment Id" type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="name">
+                        Name
+                    </label>
+                    <input id="equipment-name" placeholder="Enter Name" type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="type">
+                        Type
+                    </label>
+                    <select  id="equipment-type">
+                        <option>Select Type</option>
+                    </select>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="save">
+                    Save
+                </button>
+                <button class="update">
+                    Update
+                </button>
+                <button class="delete">
+                    Delete
+                </button>
+            </div>
+            <div class="table-container" >
+                <table id="equipment-table">
+                    <thead>
+                        <tr>
+                            <th>Equipment ID</th>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                            <th>Staff Member</th>
+                            <th>Assigned Field</th>
+                        </tr>
+                    </thead>
+                    <tbody id="my-table">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="/js/date_time.js"></script>
+</body>
+
+</html>
