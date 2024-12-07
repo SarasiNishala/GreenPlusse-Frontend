@@ -86,9 +86,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
           // Redirect user based on role
           if (result.data.role === "MANAGER") {
-            window.location.href = "../pages/dashboard_admin.html";
-          } else if (result.data.role === "ADMINISTRATIVE") {
             window.location.href = "../pages/dashboard_manager.html";
+          } else if (result.data.role === "ADMINISTRATIVE") {
+            window.location.href = "../pages/dashboard_admin.html";
           } else if (result.data.role === "SCIENTIST") {
             window.location.href = "../pages/dashboard_scientist.html";
           }

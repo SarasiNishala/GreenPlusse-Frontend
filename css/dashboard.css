@@ -59,7 +59,7 @@ body {
     padding-top: 15px;
 }
 .main-content {
-  flex: 1; /* Fill remaining space */
+  flex: 2; /* Fill remaining space */
   width: 1070px; /* Account for sidebar and margins */
   background-color: #8ab069;
   padding: 20px;
@@ -144,4 +144,5 @@ body {
 .image_farm img {
   width: 50%;  /* Makes the image width responsive */
   height: auto; /* Adjusts the height automatically to maintain the aspect ratio */
+  border-radius: 5px;
 }
