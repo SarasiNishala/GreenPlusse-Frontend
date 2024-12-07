@@ -141,3 +141,7 @@ body {
   font-size: 16px;
   color: #2d6a4f;
 }
+.image_farm img {
+  width: 50%;  /* Makes the image width responsive */
+  height: auto; /* Adjusts the height automatically to maintain the aspect ratio */
+}

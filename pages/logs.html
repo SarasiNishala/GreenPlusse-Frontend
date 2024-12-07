@@ -79,6 +79,18 @@
                     <input id="log-date" placeholder="Enter the date" type="date" />
                 </div>
                 <div class="form-group">
+                    <label for="details">
+                        Details
+                    </label>
+                    <input id="log-details" placeholder="Enter details" type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="details">
+                        Status
+                    </label>
+                    <input id="log-status" placeholder="Enter status" type="text" />
+                </div>
+                <div class="form-group">
                     <label for="select-crop">
                         Field
                     </label>
@@ -110,13 +122,13 @@
                 </div>
             </div>
             <div class="buttons">
-                <button class="save">
+                <button class="save" id="save">
                     Save
                 </button>
-                <button class="update">
+                <button class="update" id="update">
                     Update
                 </button>
-                <button class="delete">
+                <button class="delete" id="delete">
                     Delete
                 </button>
             </div>
@@ -140,6 +152,7 @@
             </div>
         </div>
         <script src="/js/date_time.js"></script>
+        <script src="/js/log.js"></script>
 </body>
 
 </html>

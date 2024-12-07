@@ -82,8 +82,28 @@
                     <label for="type">
                         Type
                     </label>
-                    <select  id="equipment-type">
-                        <option>Select Type</option>
+                    <input id="equipment-type" placeholder="Enter Type" type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="status">
+                        Status
+                    </label>
+                    <input id="equipment-status" placeholder="Enter status" type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="select-staff">
+                        Staff
+                    </label>
+                    <select  id="staff">
+                        <option>Select the staff</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="select-crop">
+                        Field
+                    </label>
+                    <select  id="field">
+                        <option>Select the field</option>
                     </select>
                 </div>
             </div>
@@ -97,11 +117,6 @@
                 <button class="delete">
                     Delete
                 </button>
-                <a href="/pages/assign_staff_equipment.html">
-                    <button class="assign-staff">
-                        Assign Staff
-                    </button>
-                </a>
             </div>
             <div class="table-container" >
                 <table id="equipment-table">
@@ -122,6 +137,7 @@
             </div>
         </div>
         <script src="/js/date_time.js"></script>
+        <script src="/js/equipment.js"></script>
 </body>
 
 </html>
